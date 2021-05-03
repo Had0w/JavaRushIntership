@@ -1,5 +1,7 @@
 package com.game.entity;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -23,7 +25,7 @@ public class Player {
     @Column(name = "birthday")
     private LocalDate birthDay;
     @Column(name = "banned")
-    private byte banned;
+    private boolean banned;
     @Column(name = "experience")
     private int experience;
     @Column(name = "level")
@@ -68,7 +70,7 @@ public class Player {
     }
 
     public void setProfession(String profession) {
-        this.profession = profession;
+     this.profession = profession;
     }
 
     public LocalDate getBirthDay() {
@@ -79,11 +81,11 @@ public class Player {
         this.birthDay = birthDay;
     }
 
-    public byte getBanned() {
+    public boolean isBanned() {
         return banned;
     }
 
-    public void setBanned(byte banned) {
+    public void setBanned(boolean banned) {
         this.banned = banned;
     }
 

@@ -1,5 +1,7 @@
 package com.game.entity;
 
+import org.springframework.stereotype.Component;
+
 public enum Race {
     HUMAN,
     DWARF,
@@ -7,5 +9,5 @@ public enum Race {
     GIANT,
     ORC,
     TROLL,
-    HOBBIT
+    HOBBIT;
 }

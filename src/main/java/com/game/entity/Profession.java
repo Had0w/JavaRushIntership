@@ -1,5 +1,8 @@
 package com.game.entity;
 
+import org.springframework.stereotype.Component;
+
+
 public enum Profession {
     WARRIOR,
     ROGUE,
@@ -8,5 +11,5 @@ public enum Profession {
     PALADIN,
     NAZGUL,
     WARLOCK,
-    DRUID
+    DRUID;
 }

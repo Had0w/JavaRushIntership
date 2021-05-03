@@ -77,8 +77,9 @@
             <th scope="col"></th>
         </tr>
         </thead>
-        <tbody id="mainTable"  >
-        <tr:forEach var="player" items="${players}">
+        <tbody id="mainTable">
+        <c:forEach var="player" items="${players}">
+        <tr>
             <td>${player.id}</td>
             <td>${player.name}</td>
             <td>${player.title}</td>
@@ -91,8 +92,8 @@
             <td>${player.banned}</td>
             <td></td>
             <td></td>
-            <br/>
-        </tr:forEach>
+        </tr>
+        </c:forEach>
         </tbody>
     </table>
     <h5 id="count" style="float: right; margin-right: 20px"></h5>
