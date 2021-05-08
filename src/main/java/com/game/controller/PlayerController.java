@@ -5,13 +5,12 @@ import com.game.service.PlayerServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @Controller
-@RequestMapping(name = "/")
+@RequestMapping(name = "/rest/players")
 public class PlayerController {
     private PlayerServiceImp playerServiceImp;
 
@@ -26,4 +25,16 @@ public class PlayerController {
         model.addAttribute("players", players);
         return "index";
     }
+
+    @PostMapping
+    public String addPlayer(@ModelAttribute("player") Player player) {
+        playerServiceImp.addPlayer(player);
+        return "redirect:/index";
+    }
+
+    @DeleteMapping("{id}")
+    public String deletePlayer(@RequestParam("id") long id) {
+        return "redirect:/index";
+    }
+
 }

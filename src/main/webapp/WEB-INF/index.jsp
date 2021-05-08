@@ -77,8 +77,8 @@
             <th scope="col"></th>
         </tr>
         </thead>
-        <tbody id="mainTable">
-        <c:forEach var="player" items="${players}">
+        <tbody id="mainTable" type="get" >
+        <c:forEach var="player"  items="${players}">
         <tr>
             <td>${player.id}</td>
             <td>${player.name}</td>
@@ -99,17 +99,17 @@
     <h5 id="count" style="float: right; margin-right: 20px"></h5>
     <div>
         <ul id="pagging-bar" class="pagination pagination-sm justify-content-center">
-
         </ul>
     </div>
 
 
     <button style="margin-bottom: 15px" type="button" class="btn btn-info" onclick="clickCreate()">Create new player</button>
-    <form style="background-color: #E9ECEF; padding: 20px; border-radius: 10px; display: none" id="createButton">
+    <form style="background-color: #E9ECEF; padding: 20px; border-radius: 10px; display: none"
+          action="/" method="post" id="createButton">
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="inputNameNew">Name</label>
-                <input type="text" class="form-control" id="inputNameNew" placeholder="Name">
+                <input type="text" class="form-control" id="inputNameNew" name="Name" placeholder="Name">
             </div>
             <div class="form-group col-md-6">
                 <label for="inputTitleNew">Title</label>

@@ -1,6 +1,5 @@
 package com.game.entity;
 
-import org.springframework.stereotype.Component;
 
 
 public enum Profession {

@@ -20,4 +20,9 @@ public class PlayerServiceImp implements PlayerService {
     public List<Player> getAllPlayers() {
         return playerRepository.findAll();
     }
+
+    @Override
+    public void addPlayer(Player player) {
+        playerRepository.save(player);
+    }
 }
